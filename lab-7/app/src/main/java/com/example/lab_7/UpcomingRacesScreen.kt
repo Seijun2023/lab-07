@@ -76,19 +76,21 @@ fun UpcomingRacesScreen(navController: NavController) {
                 modifier = Modifier.testTag("locationInput") // for testing
             )
 
-            Spacer(modifier = Modifier.height(8.dp))
 
-            Button(
-                onClick = {
-                    if (location.isNotBlank()) {
-                        races.add(location)
-                        location = ""
-                    }
-                },
-                modifier = Modifier.testTag("addRaceButton") // for testing
-            ) {
-                Text("Add")
-            }
+        }
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+        Button(
+            onClick = {
+                if (location.isNotBlank()) {
+                    races.add(location)
+                    location = ""
+                }
+            },
+            modifier = Modifier.testTag("addRaceButton") // for testing
+        ) {
+            Text("Add")
         }
 
         // list to display races
